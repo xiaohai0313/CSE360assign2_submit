@@ -11,6 +11,7 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
+	private String output = "0";
 	/**
 	 * This method should initial variable
 	 * @return - initial total parameter
@@ -33,6 +34,7 @@ public class Calculator {
 	 */
 	public void add (int value) {
 		total = total + value;
+		output = output + " + " + value;
 	}
 	
 	/**
@@ -41,6 +43,7 @@ public class Calculator {
 	 */
 	public void subtract (int value) {
 		total = total - value;
+		output = output + " - " + value;
 	}
 	
 	/**
@@ -49,6 +52,7 @@ public class Calculator {
 	 */
 	public void multiply (int value) {
 		total = total * value;
+		output = output + " * " + value;
 	}
 	
 	/**
@@ -61,6 +65,7 @@ public class Calculator {
 			total = (int) Math.floor(total / value);
 		else 
 			total = total / value;
+		output = output + " / " + value;
 	}
 	
 	/**
@@ -68,6 +73,6 @@ public class Calculator {
 	 * @return - calculation history String
 	 */
 	public String getHistory () {
-		return "";
+		return output;
 	}
 }
